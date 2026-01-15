@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>    
+    <meta charset="UTF-8">
+    <meta name="generator" content="CTAT Logic Tutor">
+    <title>Logic Tutor - Problem 2</title>
+    
+    <!--CSS-->
+    <link data-silex-static="true" href="https://cdn.ctat.cs.cmu.edu/html-editor/css/silex/normalize.css" rel="stylesheet">
+    <link data-silex-static="true" href="https://cdn.ctat.cs.cmu.edu/html-editor/css/silex/front-end.css" rel="stylesheet">
+    <link data-silex-static="true" href="https://cdn.ctat.cs.cmu.edu/releases/current/CTAT.css" rel="stylesheet">
+    
+    <!--JS-->
+    <script data-silex-static="true" type="text/javascript" src="https://cdn.ctat.cs.cmu.edu/html-editor/js/jquery.js"></script>
+    <script data-silex-static="true" type="text/javascript" src="https://cdn.ctat.cs.cmu.edu/html-editor/js/jquery-ui.js"></script>
+    <script data-silex-static="true" type="text/javascript" src="https://cdn.ctat.cs.cmu.edu/releases/current/nools.js"></script>
+    <script data-silex-static="true" type="text/javascript" src="https://cdn.ctat.cs.cmu.edu/releases/current/ctatloader.js"></script>
+    <script data-silex-static="true" type="text/javascript" src="https://cdn.ctat.cs.cmu.edu/html-editor/js/ctat/ctat.min.js"></script>
+
+    <meta name="interface-id" content="LogicTutor-Problem2">
+    <style id="current-page-style">
+        .page-page-1{display:inherit; }
+    </style>
+    
+    <link rel="stylesheet" href="Assets/Problem2-styles.css">
+</head>
+<body class="body-initial prevent-draggable silex-runtime silex-published">
+    <a id="page-page-1" data-silex-type="page" class="page-element">Page 1</a>
+    
+    <div data-silex-id="background-initial" class="background background-initial editable-style container-element prevent-draggable" data-silex-type="container">
+        
+        <!-- Problem Title -->
+        <div data-silex-type="text" class="CTATTextField editable-style silex-id-problem2-title text-element page-page-1 paged-element CTATComponent" 
+            data-silex-id="silex-id-problem2-title" id="problemTitle" data-ctat-component="CTATTextBasedComponent" data-ctat-enabled="true" contenteditable="false">
+            <h2>Problem 2: Rule Firing Sequence (Multiple Paths)</h2>
+        </div>
+        
+        <!-- Rules Description -->
+        <div data-silex-type="text" class="CTATTextField editable-style silex-id-problem2-rules text-element page-page-1 paged-element CTATComponent" 
+            data-silex-id="silex-id-problem2-rules" id="rulesDescription" data-ctat-component="CTATTextBasedComponent" data-ctat-enabled="true" contenteditable="false">
+            <b>Given the following rules:</b><br>
+            • R1: A → B<br>
+            • R2: A → C<br>
+            • R3: C → D<br>
+            • R4: B → E<br>
+            • R5: E and D → F<br><br>
+            <b>Knowing that A is true.</b>
+        </div>
+        
+        <!-- Instructions -->
+        <div data-silex-type="text" class="CTATTextField editable-style silex-id-problem2-instructions text-element page-page-1 paged-element CTATComponent" 
+             data-silex-id="silex-id-problem2-instructions" id="instructions" data-ctat-component="CTATTextBasedComponent" data-ctat-enabled="true" contenteditable="false">
+            Identify the rules that will be fired, in which sequence, and the facts that will be deduced.<br>
+            <i>(Note: When multiple rules can fire, any valid ordering is accepted.)</i>
+        </div>
+        
+        <!-- Table Headers -->
+        <div data-silex-type="text" class="CTATTextField editable-style silex-id-header-fired2 text-element page-page-1 paged-element CTATComponent" 
+             data-silex-id="silex-id-header-fired2" id="headerFired" data-ctat-component="CTATTextBasedComponent" data-ctat-enabled="true" contenteditable="false">
+            <b>Fired Rule</b>
+        </div>
+        
+        <div data-silex-type="text" class="CTATTextField editable-style silex-id-header-deduced2 text-element page-page-1 paged-element CTATComponent" 
+             data-silex-id="silex-id-header-deduced2" id="headerDeduced" data-ctat-component="CTATTextBasedComponent" data-ctat-enabled="true" contenteditable="false">
+            <b>Deduced Fact</b>
+        </div>
+        
+        <!-- Row 1: First fired rule -->
+        <div data-silex-type="text" class="CTATTextField editable-style silex-id-label-first2 text-element page-page-1 paged-element CTATComponent" 
+             data-silex-id="silex-id-label-first2" id="labelFirst" data-ctat-component="CTATTextBasedComponent" data-ctat-enabled="true" contenteditable="false">
+            First:
+        </div>
+        
+        <div data-silex-type="ctat" class="CTATTextInput editable-style silex-id-input-rule1-p2 page-page-1 paged-element CTATComponent" 
+             data-ctat-tabindex="1" data-silex-id="silex-id-input-rule1-p2" id="inputRule1" data-ctat-component="CTATTextInput" data-ctat-enabled="true" tabindex="1"></div>
+        
+        <div data-silex-type="ctat" class="CTATTextInput editable-style silex-id-input-fact1-p2 page-page-1 paged-element CTATComponent" 
+             data-ctat-tabindex="2" data-silex-id="silex-id-input-fact1-p2" id="inputFact1" data-ctat-component="CTATTextInput" data-ctat-enabled="true" tabindex="2"></div>
+        
+        <!-- Row 2: Second fired rule -->
+        <div data-silex-type="text" class="CTATTextField editable-style silex-id-label-second2 text-element page-page-1 paged-element CTATComponent" 
+             data-silex-id="silex-id-label-second2" id="labelSecond" data-ctat-component="CTATTextBasedComponent" data-ctat-enabled="true" contenteditable="false">
+            Second:
+        </div>
+        
+        <div data-silex-type="ctat" class="CTATTextInput editable-style silex-id-input-rule2-p2 page-page-1 paged-element CTATComponent" 
+             data-ctat-tabindex="3" data-silex-id="silex-id-input-rule2-p2" id="inputRule2" data-ctat-component="CTATTextInput" data-ctat-enabled="true" tabindex="3"></div>
+        
+        <div data-silex-type="ctat" class="CTATTextInput editable-style silex-id-input-fact2-p2 page-page-1 paged-element CTATComponent" 
+             data-ctat-tabindex="4" data-silex-id="silex-id-input-fact2-p2" id="inputFact2" data-ctat-component="CTATTextInput" data-ctat-enabled="true" tabindex="4"></div>
+        
+        <!-- Row 3: Third fired rule -->
+        <div data-silex-type="text" class="CTATTextField editable-style silex-id-label-third2 text-element page-page-1 paged-element CTATComponent" 
+             data-silex-id="silex-id-label-third2" id="labelThird" data-ctat-component="CTATTextBasedComponent" data-ctat-enabled="true" contenteditable="false">
+            Third:
+        </div>
+        
+        <div data-silex-type="ctat" class="CTATTextInput editable-style silex-id-input-rule3-p2 page-page-1 paged-element CTATComponent" 
+             data-ctat-tabindex="5" data-silex-id="silex-id-input-rule3-p2" id="inputRule3" data-ctat-component="CTATTextInput" data-ctat-enabled="true" tabindex="5"></div>
+        
+        <div data-silex-type="ctat" class="CTATTextInput editable-style silex-id-input-fact3-p2 page-page-1 paged-element CTATComponent" 
+             data-ctat-tabindex="6" data-silex-id="silex-id-input-fact3-p2" id="inputFact3" data-ctat-component="CTATTextInput" data-ctat-enabled="true" tabindex="6"></div>
+        
+        <!-- Row 4: Fourth fired rule -->
+        <div data-silex-type="text" class="CTATTextField editable-style silex-id-label-fourth2 text-element page-page-1 paged-element CTATComponent" 
+             data-silex-id="silex-id-label-fourth2" id="labelFourth" data-ctat-component="CTATTextBasedComponent" data-ctat-enabled="true" contenteditable="false">
+            Fourth:
+        </div>
+        
+        <div data-silex-type="ctat" class="CTATTextInput editable-style silex-id-input-rule4-p2 page-page-1 paged-element CTATComponent" 
+             data-ctat-tabindex="7" data-silex-id="silex-id-input-rule4-p2" id="inputRule4" data-ctat-component="CTATTextInput" data-ctat-enabled="true" tabindex="7"></div>
+        
+        <div data-silex-type="ctat" class="CTATTextInput editable-style silex-id-input-fact4-p2 page-page-1 paged-element CTATComponent" 
+             data-ctat-tabindex="8" data-silex-id="silex-id-input-fact4-p2" id="inputFact4" data-ctat-component="CTATTextInput" data-ctat-enabled="true" tabindex="8"></div>
+        
+        <!-- Row 5: Fifth fired rule -->
+        <div data-silex-type="text" class="CTATTextField editable-style silex-id-label-fifth2 text-element page-page-1 paged-element CTATComponent" 
+             data-silex-id="silex-id-label-fifth2" id="labelFifth" data-ctat-component="CTATTextBasedComponent" data-ctat-enabled="true" contenteditable="false">
+            Fifth:
+        </div>
+        
+        <div data-silex-type="ctat" class="CTATTextInput editable-style silex-id-input-rule5-p2 page-page-1 paged-element CTATComponent" 
+             data-ctat-tabindex="9" data-silex-id="silex-id-input-rule5-p2" id="inputRule5" data-ctat-component="CTATTextInput" data-ctat-enabled="true" tabindex="9"></div>
+        
+        <div data-silex-type="ctat" class="CTATTextInput editable-style silex-id-input-fact5-p2 page-page-1 paged-element CTATComponent" 
+             data-ctat-tabindex="10" data-silex-id="silex-id-input-fact5-p2" id="inputFact5" data-ctat-component="CTATTextInput" data-ctat-enabled="true" tabindex="10"></div>
+        
+        <!-- Hint Widget -->
+        <div data-silex-type="ctat" class="CTATHintWidget undefined editable-style silex-id-hint-widget2 page-page-1 paged-element" data-ctat-tabindex="11" data-silex-id="silex-id-hint-widget2">
+            <table style="width: 100%; height: 100%;">
+                <tbody>
+                    <tr height="125">
+                        <td>
+                            <div class="CTATHintWindow CTATComponent" id="HintWindow" data-ctat-component="CTATHintWindow" onkeypress="return noenter(event)" data-ctat-enabled="true"></div>
+                        </td>
+                        <td width="64" style="padding-top: 0px; padding-bottom: 0px;">
+                            <div id="hint" style="margin-bottom: 2px" class="CTATHintButton CTATComponent" data-ctat-component="CTATHintButton" data-ctat-enabled="true"></div>
+                            <div id="done" class="CTATDoneButton CTATComponent" data-ctat-component="CTATDoneButton" data-ctat-enabled="true" tabindex="11"></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+</body>
+</html>

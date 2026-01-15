@@ -1,0 +1,542 @@
+<?xml version="1.0" standalone="yes"?>
+
+<stateGraph firstCheckAllStates="true" caseInsensitive="true" unordered="false" lockWidget="true" hintPolicy="Use Both Kinds of Bias" version="4.0" suppressStudentFeedback="Show All Feedback" highlightRightSelection="true" startStateNodeName="%(startStateNodeName)%" tutorType="Example-tracing Tutor">
+    <startNodeMessages>
+        <message>
+            <verb>SendNoteProperty</verb>
+            <properties>
+                <MessageType>StartProblem</MessageType>
+                <ProblemName>Problem1-LinearChain</ProblemName>
+            </properties>
+        </message>
+        <message>
+            <verb>SendNoteProperty</verb>
+            <properties>
+                <MessageType>StartStateEnd</MessageType>
+            </properties>
+        </message>
+    </startNodeMessages>
+    
+    <!-- Initial State -->
+    <node locked="false" doneState="false">
+        <text>Start</text>
+        <uniqueID>1</uniqueID>
+        <dimension>
+            <x>300</x>
+            <y>30</y>
+        </dimension>
+    </node>
+    
+    <!-- After entering R1 -->
+    <node locked="false" doneState="false">
+        <text>EnteredRule1</text>
+        <uniqueID>2</uniqueID>
+        <dimension>
+            <x>300</x>
+            <y>100</y>
+        </dimension>
+    </node>
+    
+    <!-- After entering B -->
+    <node locked="false" doneState="false">
+        <text>EnteredFact1</text>
+        <uniqueID>3</uniqueID>
+        <dimension>
+            <x>300</x>
+            <y>170</y>
+        </dimension>
+    </node>
+    
+    <!-- After entering R2 -->
+    <node locked="false" doneState="false">
+        <text>EnteredRule2</text>
+        <uniqueID>4</uniqueID>
+        <dimension>
+            <x>300</x>
+            <y>240</y>
+        </dimension>
+    </node>
+    
+    <!-- After entering C -->
+    <node locked="false" doneState="false">
+        <text>EnteredFact2</text>
+        <uniqueID>5</uniqueID>
+        <dimension>
+            <x>300</x>
+            <y>310</y>
+        </dimension>
+    </node>
+    
+    <!-- After entering R3 -->
+    <node locked="false" doneState="false">
+        <text>EnteredRule3</text>
+        <uniqueID>6</uniqueID>
+        <dimension>
+            <x>300</x>
+            <y>380</y>
+        </dimension>
+    </node>
+    
+    <!-- After entering D -->
+    <node locked="false" doneState="false">
+        <text>EnteredFact3</text>
+        <uniqueID>7</uniqueID>
+        <dimension>
+            <x>300</x>
+            <y>450</y>
+        </dimension>
+    </node>
+    
+    <!-- Done State -->
+    <node locked="false" doneState="true">
+        <text>Done</text>
+        <uniqueID>8</uniqueID>
+        <dimension>
+            <x>300</x>
+            <y>520</y>
+        </dimension>
+    </node>
+    
+    <!-- Edge: Enter R1 as first fired rule -->
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>1</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <Selection>
+                        <value>inputRule1</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>R1</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>That is not the first rule to fire. Think about which rule has its left-hand side (condition) currently true. Since A is true, which rule can fire?</buggyMessage>
+            <successMessage>Correct! R1 fires first because A is true and R1 states A -> B.</successMessage>
+            <hintMessage>Which rule has A on its left-hand side?</hintMessage>
+            <hintMessage>Since A is true, look for a rule of the form A -> something.</hintMessage>
+            <hintMessage>R1 states: A -> B. Since A is true, R1 can fire first.</hintMessage>
+            <hintMessage>Please enter 'R1' in the highlighted field.</hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">inputRule1</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">R1</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>IdentifyFirableRule RuleFiring</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>1</sourceID>
+        <destID>2</destID>
+        <traversalCount>0</traversalCount>
+    </edge>
+    
+    <!-- Edge: Enter B as first deduced fact -->
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>2</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <Selection>
+                        <value>inputFact1</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>B</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>That is not the correct deduced fact. When R1 fires, what fact appears on the right-hand side of R1?</buggyMessage>
+            <successMessage>Correct! When R1 (A -> B) fires, B is deduced.</successMessage>
+            <hintMessage>What is on the right-hand side of R1?</hintMessage>
+            <hintMessage>R1 states: A -> B. When this rule fires, what fact is concluded?</hintMessage>
+            <hintMessage>Please enter 'B' in the highlighted field.</hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">inputFact1</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">B</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>DeduceFact FactDeduction</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>2</sourceID>
+        <destID>3</destID>
+        <traversalCount>0</traversalCount>
+    </edge>
+    
+    <!-- Edge: Enter R2 as second fired rule -->
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>3</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <Selection>
+                        <value>inputRule2</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>R2</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>That is not the second rule to fire. Now that B is true, which rule has B on its left-hand side?</buggyMessage>
+            <successMessage>Correct! R2 fires second because B is now true and R2 states B -> C.</successMessage>
+            <hintMessage>Now that B is true, which rule can fire next?</hintMessage>
+            <hintMessage>Look for a rule of the form B -> something.</hintMessage>
+            <hintMessage>R2 states: B -> C. Since B is now true, R2 can fire.</hintMessage>
+            <hintMessage>Please enter 'R2' in the highlighted field.</hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">inputRule2</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">R2</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>IdentifyFirableRule RuleFiring</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>3</sourceID>
+        <destID>4</destID>
+        <traversalCount>0</traversalCount>
+    </edge>
+    
+    <!-- Edge: Enter C as second deduced fact -->
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>4</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <Selection>
+                        <value>inputFact2</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>C</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>That is not the correct deduced fact. When R2 fires, what fact appears on the right-hand side of R2?</buggyMessage>
+            <successMessage>Correct! When R2 (B -> C) fires, C is deduced.</successMessage>
+            <hintMessage>What is on the right-hand side of R2?</hintMessage>
+            <hintMessage>R2 states: B -> C. When this rule fires, what fact is concluded?</hintMessage>
+            <hintMessage>Please enter 'C' in the highlighted field.</hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">inputFact2</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">C</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>DeduceFact FactDeduction</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>4</sourceID>
+        <destID>5</destID>
+        <traversalCount>0</traversalCount>
+    </edge>
+    
+    <!-- Edge: Enter R3 as third fired rule -->
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>5</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <Selection>
+                        <value>inputRule3</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>R3</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>That is not the third rule to fire. Now that C is true, which rule has C on its left-hand side?</buggyMessage>
+            <successMessage>Correct! R3 fires third because C is now true and R3 states C -> D.</successMessage>
+            <hintMessage>Now that C is true, which rule can fire next?</hintMessage>
+            <hintMessage>Look for a rule of the form C -> something.</hintMessage>
+            <hintMessage>R3 states: C -> D. Since C is now true, R3 can fire.</hintMessage>
+            <hintMessage>Please enter 'R3' in the highlighted field.</hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">inputRule3</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">R3</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>IdentifyFirableRule RuleFiring</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>5</sourceID>
+        <destID>6</destID>
+        <traversalCount>0</traversalCount>
+    </edge>
+    
+    <!-- Edge: Enter D as third deduced fact -->
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>6</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <Selection>
+                        <value>inputFact3</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>D</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>That is not the correct deduced fact. When R3 fires, what fact appears on the right-hand side of R3?</buggyMessage>
+            <successMessage>Correct! When R3 (C -> D) fires, D is deduced.</successMessage>
+            <hintMessage>What is on the right-hand side of R3?</hintMessage>
+            <hintMessage>R3 states: C -> D. When this rule fires, what fact is concluded?</hintMessage>
+            <hintMessage>Please enter 'D' in the highlighted field.</hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">inputFact3</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">D</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>DeduceFact FactDeduction</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>6</sourceID>
+        <destID>7</destID>
+        <traversalCount>0</traversalCount>
+    </edge>
+    
+    <!-- Edge: Click Done button -->
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>7</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <Selection>
+                        <value>done</value>
+                    </Selection>
+                    <Action>
+                        <value>ButtonPressed</value>
+                    </Action>
+                    <Input>
+                        <value>-1</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage></buggyMessage>
+            <successMessage>Congratulations! You have successfully completed Problem 1.</successMessage>
+            <hintMessage>Click the Done button to complete the problem.</hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">done</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">ButtonPressed</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">-1</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>CompleteProblem ProblemCompletion</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>7</sourceID>
+        <destID>8</destID>
+        <traversalCount>0</traversalCount>
+    </edge>
+    
+</stateGraph>
