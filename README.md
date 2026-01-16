@@ -4,6 +4,11 @@ This is a CTAT (Cognitive Tutor Authoring Tools) project for teaching logic and 
 
 This project was created for the **Adaptive Systems 2025-2026** course as part of the **Technology-Enhanced Adaptive Learning Practical Work**.
 
+Group project members:
+- Buonaccorsi Emanuele
+- Osadici Darius
+- Rădulescu Adelina
+
 ## Usage Instructions
 
 ### Opening in CTAT Authoring Tools
