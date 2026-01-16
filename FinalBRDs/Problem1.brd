@@ -17,7 +17,7 @@
         </message>
     </startNodeMessages>
     
-    <!-- Initial State -->
+    <!-- starting point -->
     <node locked="false" doneState="false">
         <text>Start</text>
         <uniqueID>1</uniqueID>
@@ -27,7 +27,7 @@
         </dimension>
     </node>
     
-    <!-- After entering R1 -->
+    <!-- got R1 -->
     <node locked="false" doneState="false">
         <text>EnteredRule1</text>
         <uniqueID>2</uniqueID>
@@ -37,7 +37,7 @@
         </dimension>
     </node>
     
-    <!-- After entering B -->
+    <!-- got B -->
     <node locked="false" doneState="false">
         <text>EnteredFact1</text>
         <uniqueID>3</uniqueID>
@@ -47,7 +47,7 @@
         </dimension>
     </node>
     
-    <!-- After entering R2 -->
+    <!-- got R2 -->
     <node locked="false" doneState="false">
         <text>EnteredRule2</text>
         <uniqueID>4</uniqueID>
@@ -57,7 +57,7 @@
         </dimension>
     </node>
     
-    <!-- After entering C -->
+    <!-- got C -->
     <node locked="false" doneState="false">
         <text>EnteredFact2</text>
         <uniqueID>5</uniqueID>
@@ -67,7 +67,7 @@
         </dimension>
     </node>
     
-    <!-- After entering R3 -->
+    <!-- got R3 -->
     <node locked="false" doneState="false">
         <text>EnteredRule3</text>
         <uniqueID>6</uniqueID>
@@ -77,7 +77,7 @@
         </dimension>
     </node>
     
-    <!-- After entering D -->
+    <!-- got D -->
     <node locked="false" doneState="false">
         <text>EnteredFact3</text>
         <uniqueID>7</uniqueID>
@@ -87,7 +87,7 @@
         </dimension>
     </node>
     
-    <!-- Done State -->
+    <!-- all done -->
     <node locked="false" doneState="true">
         <text>Done</text>
         <uniqueID>8</uniqueID>
@@ -97,7 +97,7 @@
         </dimension>
     </node>
     
-    <!-- Edge: Enter R1 as first fired rule -->
+    <!-- user types R1 first -->
     <edge>
         <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
             <studentHintRequest></studentHintRequest>
@@ -161,7 +161,7 @@
         <traversalCount>0</traversalCount>
     </edge>
     
-    <!-- Edge: Enter B as first deduced fact -->
+    <!-- user enters B -->
     <edge>
         <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
             <studentHintRequest></studentHintRequest>
@@ -224,7 +224,7 @@
         <traversalCount>0</traversalCount>
     </edge>
     
-    <!-- Edge: Enter R2 as second fired rule -->
+    <!-- user types R2 -->
     <edge>
         <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
             <studentHintRequest></studentHintRequest>
@@ -288,7 +288,7 @@
         <traversalCount>0</traversalCount>
     </edge>
     
-    <!-- Edge: Enter C as second deduced fact -->
+    <!-- user enters C -->
     <edge>
         <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
             <studentHintRequest></studentHintRequest>
@@ -351,7 +351,7 @@
         <traversalCount>0</traversalCount>
     </edge>
     
-    <!-- Edge: Enter R3 as third fired rule -->
+    <!-- user types R3 -->
     <edge>
         <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
             <studentHintRequest></studentHintRequest>
@@ -415,7 +415,7 @@
         <traversalCount>0</traversalCount>
     </edge>
     
-    <!-- Edge: Enter D as third deduced fact -->
+    <!-- user enters D -->
     <edge>
         <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
             <studentHintRequest></studentHintRequest>
@@ -478,7 +478,7 @@
         <traversalCount>0</traversalCount>
     </edge>
     
-    <!-- Edge: Click Done button -->
+    <!-- done button click -->
     <edge>
         <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
             <studentHintRequest></studentHintRequest>

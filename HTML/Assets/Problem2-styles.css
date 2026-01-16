@@ -1,4 +1,4 @@
-/* Logic Tutor - Problem 2 Styles */
+/* styles for problem 2 page */
 
 .body-initial {
     background-color: rgb(255, 255, 255);
@@ -12,7 +12,7 @@
     height: 720px;
 }
 
-/* Problem Title */
+/* title at the top */
 .silex-id-problem2-title {
     top: 10px;
     left: 20px;
@@ -21,7 +21,7 @@
     font-size: 18px;
 }
 
-/* Rules Description */
+/* the rules box */
 .silex-id-problem2-rules {
     top: 85px;
     left: 20px;
@@ -31,7 +31,7 @@
     line-height: 1.6;
 }
 
-/* Instructions */
+/* instructions text */
 .silex-id-problem2-instructions {
     top: 275px;
     left: 20px;
@@ -40,7 +40,7 @@
     font-size: 14px;
 }
 
-/* Table Headers */
+/* column headers */
 .silex-id-header-fired2 {
     top: 335px;
     left: 120px;
@@ -59,7 +59,7 @@
     text-align: center;
 }
 
-/* Row Labels */
+/* labels on the left side */
 .silex-id-label-first2 {
     top: 370px;
     left: 20px;
@@ -100,7 +100,7 @@
     font-size: 14px;
 }
 
-/* Input Fields - Rule Column */
+/* rule inputs */
 .silex-id-input-rule1-p2 {
     top: 365px;
     left: 120px;
@@ -136,7 +136,7 @@
     width: 80px;
 }
 
-/* Input Fields - Fact Column */
+/* fact inputs */
 .silex-id-input-fact1-p2 {
     top: 365px;
     left: 260px;
@@ -172,7 +172,7 @@
     width: 80px;
 }
 
-/* Hint Widget */
+/* hint area */
 .silex-id-hint-widget2 {
     top: 585px;
     left: 20px;
@@ -180,7 +180,7 @@
     width: 450px;
 }
 
-/* Skill Window */
+/* skill meter on the right */
 .silex-id-skill-window2 {
     top: 85px;
     left: 420px;
