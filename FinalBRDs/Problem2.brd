@@ -497,32 +497,6 @@
     </edge>
 
     <edge>
-        <actionLabel preferPathMark="false" minTraversals="0" maxTraversals="99">
-            <uniqueID>99</uniqueID>
-            <message>
-                <verb>NotePropertySet</verb>
-                <properties>
-                    <MessageType>InterfaceAction</MessageType>
-                    <Selection><value>done</value></Selection>
-                    <Action><value>ButtonPressed</value></Action>
-                    <Input><value>-1</value></Input>
-                </properties>
-            </message>
-            <buggyMessage>You haven't completed the problem yet. You need to apply the inference rules step by step to reach the goal.</buggyMessage>
-            <hintMessage>You need to complete all steps before clicking Done.</hintMessage>
-            <actionType>Buggy Action</actionType>
-            <matchers Concatenation="true">
-                <Selection><matcher><matcherType>ExactMatcher</matcherType><matcherParameter name="single">done</matcherParameter></matcher></Selection>
-                <Action><matcher><matcherType>ExactMatcher</matcherType><matcherParameter name="single">ButtonPressed</matcherParameter></matcher></Action>
-                <Input><matcher><matcherType>ExactMatcher</matcherType><matcherParameter name="single">-1</matcherParameter></matcher></Input>
-                <Actor linkTriggered="false">Student</Actor>
-            </matchers>
-        </actionLabel>
-        <sourceID>1</sourceID>
-        <destID>1</destID>
-    </edge>
-
-    <edge>
         <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
             <uniqueID>2</uniqueID>
             <message>
